@@ -1,18 +1,125 @@
+body {
+    font-family: 'Catamaran', sans-serif;
+}
 
-
-
-
-/* body {
-    background-image: url("images/MainImage.jpg");
-    background-size: cover;
-    height: 200px;
-} */
-
-div {
-    height: 200px;
-    width: 100%;
+#container {
+    height: 1161px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
     /* border: 5px solid #4CAF50; */
+    background-color: #f8f9fa;
+}
+
+header {
+    display: flex;
+    position: relative;
+    width: 600px;
+    height: 160px;
     background-image: url("images/Store.jpg");
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
-  }
+    margin-bottom: 70px;
+}
+
+h3 {
+    position: absolute;
+    width: 550px;
+    height: 45px;
+    top: 20;
+    left: 35px;
+    font-weight: 400;
+    font-size: 40px;
+    color: #ffd60a;
+    margin: 0px;
+
+
+}
+
+.el-h3 {
+    position: absolute;
+    top: 70px;
+    left: 45px;
+    font-size: 15px;
+    ;
+    color: #d9d9d9;
+    font-weight: 400;
+
+
+}
+
+span {
+    border-bottom: 2px solid #ffd60a;
+    border-radius: 10%;
+}
+
+.item {
+
+    width: 508px;
+    height: 140px;
+    border-bottom: 1px solid #ced4da;
+    margin-bottom: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e9ecef;
+
+}
+.item-desc {
+/* border: 1px solid red;; */
+margin-left: 20px;
+}
+
+p{
+   margin: 0;
+}
+.item-name {
+padding-top: 15px;
+color: #343a40;
+}
+.small-text {
+    font-size: 12px;;
+    color: #adb5bd;
+}
+.price {
+    padding-top: 15px;
+    font-size: 12px;;
+    color: #343a40;
+}
+.item-img {
+    /* border: 1px solid red; */
+}
+
+.item-img img {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 70px;
+    height: 90px;;
+    background-size: cover;
+    border-radius: 20%;
+    /* border: 1px solid red; */
+}
+
+.item-container{
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 10px ;
+}
+
+
+
+.add-me-btn{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid red;; */
+    margin-left: auto;
+}
+
+i {
+
+   
+    color:#ced4da;
+    margin: auto;
+
+}
