@@ -3,8 +3,8 @@ body {
 }
 
 #container {
-    height: 1320px;
-    width: 450px;
+    height: 1165px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -15,12 +15,12 @@ body {
 header {
     display: flex;
     position: relative;
-    width: 450px;
-    height: 160px;
+    width: 600px;
+    height: 167px;
     background-image: url("images/Store.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    margin-bottom: 70px;
+    margin-bottom: 25px;
 }
 
 h3 {
@@ -68,12 +68,13 @@ h3 {
 
 .item {
 
-    width: 400px;
+    width: 508px;
     height: 140px;
     border-bottom: 1px solid #ced4da;
-    margin-bottom: 45px;
+    /* margin-bottom: 45px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
+    margin: 46px;
     background-color: #e9ecef;
 
 }
