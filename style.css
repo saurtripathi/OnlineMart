@@ -4,7 +4,7 @@ body {
 
 #container {
     height: 1320px;
-    width: 400px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -15,7 +15,7 @@ body {
 header {
     display: flex;
     position: relative;
-    width: 400px;
+    width: 450px;
     height: 160px;
     background-image: url("images/Store.jpg");
     background-size: cover;
@@ -68,7 +68,7 @@ h3 {
 
 .item {
 
-    width: 350px;
+    width: 400px;
     height: 140px;
     border-bottom: 1px solid #ced4da;
     margin-bottom: 45px;
