@@ -8,13 +8,15 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
-    /* border: 5px solid #4CAF50; */
     background-color: #f8f9fa;
 }
+
+/* ---------------------------------  Header section---------------------------------------------- */
 
 header {
     display: flex;
     position: relative;
+    align-items: flex-start;
     width: 600px;
     height: 167px;
     background-image: url("images/Store.jpg");
@@ -33,22 +35,12 @@ h3 {
     font-size: 40px;
     color: #ffd60a;
     margin: 0px;
-
-
-
 }
 
 .borderMeDown {
     border-bottom: 5px solid red;
-    border-radius: 50%;
+    border-radius: 25%;
 }
-
-.borderMeUp {
-    border-top: 5px solid red;
-    border-radius: 50%;
-}
-
-
 .el-h3 {
     position: absolute;
     top: 70px;
@@ -57,30 +49,18 @@ h3 {
     color: #d9d9d9;
     font-weight: 400;
     padding-top: 20px;
-
-
 }
 
-/* span {
-    border-bottom: 2px solid #ffd60a;
-    border-radius: 10%;
-} */
-
 .item {
-
+    position: relative;
     width: 508px;
     height: 140px;
     border-bottom: 1px solid #ced4da;
-    /* margin-bottom: 45px;
-    margin-left: auto;
-    margin-right: auto; */
     margin: 46px;
     background-color: #e9ecef;
-
 }
 
 .item-desc {
-    /* border: 1px solid red;; */
     margin-left: 20px;
 }
 
@@ -95,7 +75,6 @@ p {
 
 .small-text {
     font-size: 12px;
-    ;
     color: #adb5bd;
 }
 
@@ -138,24 +117,23 @@ p {
 }
 
 i {
-
-
     color: #ced4da;
     margin: auto;
-
 }
 
 .checkout-section {
-
-    
-    height: 419px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
     width: 508px;
     border-bottom: 1px solid #ced4da;
-    margin-bottom: 45px;
+    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
     background-color: #e9ecef;
-    padding-top: 50px;
+    padding-top: 10px;
+    border: 2px solid #393333;
 
 }
 
@@ -164,8 +142,9 @@ i {
 }
 
 .order-detail {
-    font-size: 12px;
-    ;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: normal;
     padding-top: 5px;
     text-align: center;
     color: #343a40;
@@ -175,21 +154,14 @@ i {
     display: flex;
     justify-content: space-between;
     padding: 0px 10px;
-    margin-top: 50px;
-    /* margin-left: auto; */
-
-
+    margin-top: 10px;
 }
 
 .total-price-div {
     display: flex;
     justify-content: space-between;
     padding: 0px 10px;
-    margin-top: 50px;
-    padding-top: 12px;
-    /* margin-left: auto; */
-
-
+    margin-top: 10px;
 }
 
 .bt {
@@ -197,15 +169,10 @@ i {
 }
 
 i:active {
-     
-        /* background-color: #3e8e41;
-        box-shadow: 0 5px #666; */
         transform: translateY(4px);
-      
 }
 
 i:hover{
-           /* opacity: 0.4; */
            cursor: pointer;
            color: green;
 }
@@ -215,7 +182,7 @@ i:hover{
 }
 
 .orderBtn {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -223,15 +190,13 @@ i:hover{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin-bottom: 0px;
     cursor: pointer;
     width: 100%;
-
   }
   
   .orderBtn:active {
     transform: translateY(5px);
-
   }
   .orderBtn:hover{
     background-color: #081c15;
@@ -244,11 +209,9 @@ i:hover{
   }
 
 .removeItem {
-    /* border: none; */
     cursor: pointer;
 }
 .removeItem:active {
-    /* background-color: #3e8e41; */
     box-shadow: 0 5px #666;
     transform: translateX(4px);
 }
@@ -257,26 +220,23 @@ i:hover{
     display: none;
     position: fixed;
     top: 0;
-    bottom: auto;
+    bottom: 0;
     left: auto;
     right: auto;
-    
     border: 3px solid #f1f1f1;
-    /* z-index: 9; */
+    z-index: 9;
   }
 
   .form-container {
-    width: 580px;
+    position:absolute;
+    width: 600px;
     height: 100vh;
     padding: 10px;
     background-color: white;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
   }
 
 
@@ -315,8 +275,6 @@ i:hover{
   }
 
   .card-detail {
-    /* width: 305px;
-    height: 42px; */
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
@@ -342,3 +300,7 @@ i:hover{
     display: none;
   }
 
+.fix-me {
+    position: absolute;
+
+}

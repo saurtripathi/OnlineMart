@@ -13,7 +13,7 @@ export const productData = [
         pid: `2158c53a-e85f-4378-8370-7c30f92fe985`,       
         price: 20,   
         isPurchased:false,        
-        image:`images/wired-earphone.jpg`
+        image:`images/wired-earphone-yellow.avif`
     },
     
         {
