@@ -1,14 +1,9 @@
 import { productData } from "./data.js";
 const main = document.getElementById('main')
-const paymentForm = document.getElementById('paymentForm');
-
+let count = 0
+const paymentForm = document.getElementById('paymentForm')
 
 render()
-
-let count = 0
-let changeCount = 0
-let recentlyAddedProduct = ""
-let total = 0
 document.addEventListener('click', function (e) {
     if (e.target.dataset.productId) {
         if (document.getElementById('order-complete')) {
@@ -84,7 +79,6 @@ function handleRemoveClick(removeItemId) {
         if (count === 0) {
             document.getElementById(removeItemId).classList.add('toggleMe')
             if (Number(document.getElementById('total_price').textContent.substring(1)) === 0) {
-                // console.log(document.getElementById('total_price').textContent)
                 document.getElementById('total_price').textContent = ''
                 document.getElementById('total-price-div').classList.add('toggleMe')
                 document.getElementById('orderBtn').classList.add('hideBtn')
@@ -99,7 +93,7 @@ function handleRemoveClick(removeItemId) {
 
 function handleAddClick(productId) {
 
-    const addedProductArray = []
+
     const productObject = productData.filter(function (product) {
         return (product.pid === productId)
     })[0]
@@ -124,7 +118,7 @@ function handleAddClick(productId) {
         } else {
             totalElm = Number(document.getElementById('total_price').textContent.trim())
         }
-        // alert(totalElm)
+
         let elm = document.getElementById('bill-item-count'.concat(productId)).textContent.trim();
         count = Number(document.getElementById('bill-item-count'.concat(productId)).textContent.substring(1, elm.length - 1))
         count++
@@ -161,42 +155,19 @@ function render() {
 }
 
 
-function getBilledItemHtml(itemPrice, pObj) {
-
-    return (`
-                                <div class="item-in-cart toggleMe">
-                                    <p class="ordered-item" >${pObj.name}</p>
-                                    <p class="item-price" id="${pObj.pid}" >$${itemPrice}</p>
-                                </div>
-                            `
-    )
-}
-
-
-
-function getTotalHtml(pObj) {
-
-    return (`
-                    <div class="toggleMe">
-                    <div class="item-in-cart bt "></div>
-                    <div class="total-price-div" id="total-price-div" >
-                        <p class="ordered-item "> Total Price</p>
-                        <p class="item-price">$${pObj.price}</p>
-                    </div>
-                    </div>
-        `)
-}
-
 function handleOrderBtnClick() {
     document.getElementById("myForm").style.display = "flex";
 
 }
 
+
 paymentForm.addEventListener('submit', function (e) {
     e.preventDefault()
+
+
     const paymentFormData = new FormData(paymentForm)
     let customerName = paymentFormData.get("customerName")
-
+    console.log(customerName)
     document.getElementById("myForm").style.display = "none";
     main.innerHTML = ""
     render()
@@ -209,6 +180,6 @@ paymentForm.addEventListener('submit', function (e) {
                     `
     setTimeout(() => {
         document.location.reload();
-    }, 500);
+    }, 1000);
 
 })
